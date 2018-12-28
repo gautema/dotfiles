@@ -1,0 +1,26 @@
+alias g="git"
+alias tlf="tail -f"
+alias ln='ln -v'
+alias mkdir='mkdir -p'
+alias ...='../..'
+alias ....='../../..'
+alias .....='../../../..'
+alias ......='../../../../../..'
+alias .......='../../../../../../..'
+alias ........='../../../../../../../..'
+alias .........='../../../../../../../../..'
+alias l='ls'
+alias ll='ls -al'
+alias lh='ls -Alh'
+alias lsd='ls -l | grep "^d"'
+alias brewer='date;brew update;brew upgrade;brew cleanup'
+
+alias -g G='| grep'
+alias -g M='| less'
+alias -g L='| wc -l'
+alias -g ONE="| awk '{ print \$1}'"
+
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+alias sniff="sudo ngrep -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
