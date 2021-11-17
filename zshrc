@@ -69,3 +69,5 @@ setopt EXTENDED_GLOB
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
+. $HOME/.asdf/asdf.sh
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)

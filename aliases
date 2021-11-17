@@ -13,7 +13,7 @@ alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
 alias lsd='ls -l | grep "^d"'
-alias brewer='date;brew update;brew upgrade;brew cask upgrade --greedy;brew cleanup'
+alias brewer='date;brew update;brew upgrade;brew cleanup'
 
 alias -g G='| grep'
 alias -g M='| less'
