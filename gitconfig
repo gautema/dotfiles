@@ -5,3 +5,5 @@
 [user]
 	name = Gaute Magnussen
 	email = gaute.magnussen@gmail.com
+[init]
+	defaultBranch = main

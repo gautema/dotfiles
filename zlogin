@@ -7,15 +7,16 @@ git_prompt_info() {
 }
 
 # makes color constants available
-autoload -U colors
-colors
+# autoload -U colors
+# colors
 
 # enable colored output from ls, etc
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
+# export CLICOLOR=1
+# export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # expand functions in the prompt
-setopt prompt_subst
+# setopt prompt_subst
 
 # prompt
-export PS1='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
+# export PS1='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
+# source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme

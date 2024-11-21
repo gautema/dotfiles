@@ -9,11 +9,11 @@ alias ......='../../../../../..'
 alias .......='../../../../../../..'
 alias ........='../../../../../../../..'
 alias .........='../../../../../../../../..'
-alias l='ls'
-alias ll='ls -al'
-alias lh='ls -Alh'
+alias ls='ls --color'
+alias ll='ls -al --color'
+alias lh='ls -Alh --color'
 alias lsd='ls -l | grep "^d"'
-alias brewer='date;brew update;brew upgrade;brew cleanup'
+alias brewer='date;brew update;brew upgrade --greedy;brew cleanup'
 
 alias -g G='| grep'
 alias -g M='| less'
@@ -24,3 +24,5 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias sniff="sudo ngrep -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+alias python="/opt/homebrew/bin/python3"
