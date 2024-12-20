@@ -40,8 +40,11 @@ bindkey "^F" vi-cmd-mode
 bindkey "^R" history-incremental-search-backward
 
 # add some readline keys back
-bindkey "^A" beginning-of-line
-bindkey "^E" end-of-line
+bindkey "^[[1;3D" beginning-of-line
+bindkey "^[[1;3C" end-of-line
+
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
 
 # handy keybindings
 bindkey "^P" history-search-backward
@@ -57,9 +60,14 @@ export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
 
 
 # ignore duplicate history entries
-setopt histignoredups
+setopt share_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_verify
 
 # keep TONS of history
+export HISTFILE=$HOME/.zhistory
+export SAVEHIST=4096
 export HISTSIZE=4096
 
 # look for ey config in project dirs
@@ -93,3 +101,5 @@ source $(brew --prefix)/opt/powerlevel10k/share/powerlevel10k/powerlevel10k.zsh-
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias gam="/Users/gautema/bin/gamadv-xtd3/gam"
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
