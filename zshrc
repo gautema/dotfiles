@@ -90,7 +90,7 @@ setopt EXTENDED_GLOB
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
-. $HOME/.asdf/asdf.sh
+  . /opt/homebrew/opt/asdf/libexec/asdf.sh
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
